@@ -53,9 +53,13 @@ for post in post_list:
     with open("template/list.html", "r") as file:
         index_content = file.read()
 
+    post_name = post.replace(".md", "")
+
     index_content = index_content.replace("{title}", title)
     index_content = index_content.replace("{subtitle}", subtitle)
     index_content = index_content.replace("{date}", date)
+    index_content = index_content.replace("{content}", content)
+    index_content = index_content.replace("{post_name}", post_name)
 
     
     """# {date} 문자열을 date의 값으로 바꾸기
@@ -107,10 +111,17 @@ for post in post_list:
     with open("template/post.html", "r") as file:
         post_content = file.read()
 
-    content = post_content.replace("{content}", content)
+    post_content = post_content.replace("{title}", title)
+    post_content = post_content.replace("{subtitle}", subtitle)
+    post_content = post_content.replace("{date}", date)
+    post_content = post_content.replace("{content}", content)
+    post_content = post_content.replace("{post_name}", post_name)
+
+    content = post_content
+
     
-    with open(f"post/{date}-{title}.html", "w") as file:
-        file.write(content)
+    with open(f"post/{date}-{post_name}.html", "w") as file:
+        file.write(content) 
     
 
     
