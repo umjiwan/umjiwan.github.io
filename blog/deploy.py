@@ -88,7 +88,7 @@ for post in post_list:
     post_content = post_content.replace("{date}", date)
     post_content = post_content.replace("{content}", content)
     post_content = post_content.replace("{post_name}", post_name)
-    post_content = post_content.replace("{tags}", ", ".join(tags))
+    post_content = post_content.replace("{tags}", ", ".join(af_tags))
 
     content = post_content
 
@@ -113,14 +113,3 @@ for tag in list(set(tag_list)):
         if tag in post_tag[-1]:
             with open(f"tag/{tag}.html", "a") as file:
                 file.write(f"<a href='../post/{post_tag[3]}-{post_tag[0]}.html'>{post_tag[1]}</a><br>\n")
-
-
-
-
-
-
-    
-    
-
-    
-    

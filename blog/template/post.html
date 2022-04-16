@@ -2,10 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>{title}</title>
+        <title>ulog - {title}</title>
+        <link rel="stylesheet" href="../template/style.css">
     </head>
     <body>
-        <h3>{title}</h3>
-        {content}
+        <div class="post">
+            <h1>{title}</h1>
+            {subtitle}
+            <hr>
+            <p>
+                {content}
+            </p>
+            <hr>
+            <h5>
+                작성자 : ulhangry<br>
+                쓴날짜 : {date}<br>
+                태그 : {tags}
+            </h5>
+        </div>
     </body>
 </html>
