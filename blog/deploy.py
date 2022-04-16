@@ -66,12 +66,16 @@ for post in post_list:
 
     post_name = post.replace(".md", "")
 
+    af_tags = []
+    for i in tags:
+        af_tags.append(f"<a href='tag/{i}.html'>{i}</a>")
+
     index_content = index_content.replace("{title}", title)
     index_content = index_content.replace("{subtitle}", subtitle)
     index_content = index_content.replace("{date}", date)
     index_content = index_content.replace("{content}", content)
     index_content = index_content.replace("{post_name}", post_name)
-    index_content = index_content.replace("{tags}", ", ".join(tags))
+    index_content = index_content.replace("{tags}", " ".join(af_tags))
 
     with open("index.html", "a") as file:
         file.write(index_content)
@@ -104,8 +108,6 @@ with open("tag/index.html", "w") as file:
         file.write(f"<a href='{tag}.html'>{tag}</a><br>\n")
 
 # write tag_file
-print(post_tag_list[0])
-
 for tag in list(set(tag_list)):
     for post_tag in post_tag_list:
         if tag in post_tag[-1]:
