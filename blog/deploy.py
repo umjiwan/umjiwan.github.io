@@ -19,6 +19,7 @@ f = open("index.html", "w"); f.close()
 
 # html 파일 생성
 tag_list = []
+post_tag_list = []
 for post in post_list:
     with open("md/" + post, "r") as file:
         post_content = file.read()
@@ -38,6 +39,7 @@ for post in post_list:
         continue
 
     tags = tags.split(",")
+    post_tag_list += [[post.replace(".md", ""), title, subtitle, date, tags]]
 
     for i in range(len(tags)):
         if tags[i][0] == " ":
@@ -58,7 +60,6 @@ for post in post_list:
             break
     
     content = "".join(content_list)
-    title = title.replace(" ", "_")
 
     with open("template/list.html", "r") as file:
         index_content = file.read()
@@ -88,10 +89,34 @@ for post in post_list:
     content = post_content
 
     with open(f"post/{date}-{post_name}.html", "w") as file:
-        file.write(content) 
+        file.write(content)
+ 
+# tag
 
-    
-print(list(set(tag_list)))
+# rm tag_file
+tag_file_list = os.listdir("tag/")
+for tag_file in tag_file_list:
+    os.remove("tag/" + tag_file)
+
+# write tag/index.html
+with open("tag/index.html", "w") as file:
+    for tag in list(set(tag_list)):
+        file.write(f"<a href='{tag}.html'>{tag}</a><br>\n")
+
+# write tag_file
+print(post_tag_list[0])
+
+for tag in list(set(tag_list)):
+    for post_tag in post_tag_list:
+        if tag in post_tag[-1]:
+            with open(f"tag/{tag}.html", "a") as file:
+                file.write(f"<a href='../post/{post_tag[3]}-{post_tag[0]}.html'>{post_tag[1]}</a><br>\n")
+
+
+
+
+
+
     
     
 
