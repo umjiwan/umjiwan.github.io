@@ -9,6 +9,7 @@ subtitle = 0
 date = 0
 hidden = 0
 tags = 0
+index = ""
 
 # 기존 파일 제거
 rm_list = os.listdir("post/")
@@ -79,8 +80,7 @@ for post in post_list:
     index_content = index_content.replace("{post_name}", post_name)
     index_content = index_content.replace("{tags}", " ".join(af_tags))
 
-    with open("index.html", "a") as file:
-        file.write(index_content)
+    index += index_content
 
     with open("template/post.html", "r") as file:
         post_content = file.read()
@@ -115,3 +115,13 @@ for tag in list(set(tag_list)):
         if tag in post_tag[-1]:
             with open(f"tag/{tag}.html", "a") as file:
                 file.write(f"<a href='../post/{post_tag[3]}-{post_tag[0]}.html'>{post_tag[1]}</a><br>\n")
+
+# index.html
+
+with open("template/_index.html", "r") as file:
+    _index_content = file.read()
+
+_index_content = _index_content.replace("{list}", index)
+
+with open("index.html", "w") as file:
+    file.write(_index_content)
