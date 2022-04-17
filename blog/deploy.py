@@ -67,8 +67,10 @@ for post in post_list:
     post_name = post.replace(".md", "")
 
     af_tags = []
+    af_tags_p = []
     for i in tags:
         af_tags.append(f"<a href='tag/{i}.html'>{i}</a>")
+        af_tags_p.append(f"<a href='../tag/{i}.html'>{i}</a>")
 
     index_content = index_content.replace("{title}", title)
     index_content = index_content.replace("{subtitle}", subtitle)
@@ -88,7 +90,7 @@ for post in post_list:
     post_content = post_content.replace("{date}", date)
     post_content = post_content.replace("{content}", content)
     post_content = post_content.replace("{post_name}", post_name)
-    post_content = post_content.replace("{tags}", ", ".join(af_tags))
+    post_content = post_content.replace("{tags}", ", ".join(af_tags_p))
 
     content = post_content
 
