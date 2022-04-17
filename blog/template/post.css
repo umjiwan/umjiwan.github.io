@@ -1,7 +1,15 @@
-body {
+.post {
     font-family: 'LeeSeoyun';
-    width: 480px;
+    width: 1000px;
     margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
 }
 
 h5 {
