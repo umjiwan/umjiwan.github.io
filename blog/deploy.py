@@ -70,8 +70,8 @@ for post in post_list:
     af_tags = []
     af_tags_p = []
     for i in tags:
-        af_tags.append(f"<a href='tag/{i}.html'>{i}</a>")
-        af_tags_p.append(f"<a href='../tag/{i}.html'>{i}</a>")
+        af_tags.append(f"<a href='tag/{i}.html' class='tag'>{i}</a>")
+        af_tags_p.append(f"<a href='../tag/{i}.html' class='tag'>{i}</a>")
 
     index_content = index_content.replace("{title}", title)
     index_content = index_content.replace("{subtitle}", subtitle)
