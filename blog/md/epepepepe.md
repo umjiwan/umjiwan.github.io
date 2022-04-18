@@ -1,9 +1,28 @@
 {
 date: 2022-04-17
-title: test 2222
-subtitle: this is title2222.
+title: 파이썬 Hello World! 출력
+subtitle: 가장 기본적인 출력이라는 걸 배워보자
 hidden: false
-tags: test
+tags: 파이썬, 테스트, 공부
 }
-hello myname is
-안녕하세요 유엘 입나딩
+파이썬 hello world 출력은<br>
+print("hello world")<br>
+<br>
+파이썬 hello world 출력은<br>
+print("hello world")<br>
+<br>
+파이썬 hello world 출력은<br>
+print("hello world")<br>
+<br>
+파이썬 hello world 출력은<br>
+print("hello world")<br>
+<br>
+파이썬 hello world 출력은<br>
+print("hello world")<br>
+<br>
+파이썬 hello world 출력은<br>
+print("hello world")<br>
+<br>
+파이썬 hello world 출력은<br>
+print("hello world")<br>
+<br>
