@@ -9,8 +9,8 @@
 }
 
 span.github {
-    float: right;
     margin-top: 1.7em;
+    margin-left: 1em;
     margin-right: 1em;
     display: inline-box;
 }
