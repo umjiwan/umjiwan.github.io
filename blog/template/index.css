@@ -1,7 +1,8 @@
 .main_index {
     font-family: 'LeeSeoyun';
-    width: 600px;
+    max-width: 650px;
     margin: 0 auto;
+    padding: 1em;
 }
 
 .post_title {
@@ -13,6 +14,7 @@ span.github {
     margin-left: 1em;
     margin-right: 1em;
     display: inline-box;
+    float: right;
 }
 
 span.post_date {
