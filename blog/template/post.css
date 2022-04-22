@@ -1,38 +1,46 @@
-.post {
+div.post {
     font-family: 'LeeSeoyun';
-    max-width: 650px;
+    max-width: 50rem;
     margin: 0 auto;
     padding: 1rem;
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 0.3em;
+    display: inline-box;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+span.subtitle {
+    font-size: 1rem;
+    display: inline-box;
 }
 
 span.github {
     display: inline-box;
     float: right;
-    margin-right: 1em;
 }
 
 a.github {
+    font-size: 1rem;
     color: #707070;
-    margin-left: 0.5em;
+    text-decoration: none;
+    margin-left: 0.5rem;
 }
 
-
-p {
-    font-size: 1.2em;
+p.content {
+    font-size: 1rem;
 }
 
 h5 {
-    color: #707070
+    font-size:0.8rem;
+    margin-top: 0rem;
+    color: #707070;
 }
 
-a {
+a.tag {
     text-decoration: none;
-    color: #707070;
+    color:#707070
 }
 
 @font-face {

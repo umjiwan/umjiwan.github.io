@@ -1,54 +1,60 @@
-.main_index {
+div.main_index {
     font-family: 'LeeSeoyun';
-    max-width: 650px;
+    max-width: 50rem;
     margin: 0 auto;
-    padding: 1em;
-}
-
-.post_title {
-    font-size: 1.5em;
-}
-
-span.github {
-    margin-top: 1.7em;
-    margin-left: 1em;
-    margin-right: 1em;
-    display: inline-box;
-    float: right;
-}
-
-span.post_date {
-    font-size: 0.7em;
-    color: #707070;
-}
-
-a.github {
-    color: #707070;
-    margin-left: 0.5em;
-}
-
-a.tag {
-    color: #707070;
-}
-
-p {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-a {
-    color: black;
-    text-decoration: none;
+    padding: 1rem
 }
 
 span.h1 {
-    font-size: 2.3em;
+    font-size: 2rem;
     display: inline-box;
 }
 
-span.bottom {
-    font-size: 1em;
+span.github {
+    display: inline-box;
+    float: right;
+    margin-top: 1.3rem;
+    margin-right: 1.5rem;
+}
+
+a.github {
+    font-size: 1rem;
     color: #707070;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+span.post_date {
+    font-size: 0.7rem;
+    color: #707070;
+}
+
+span.post_title {
+    font-size: 1.5rem;
+}
+
+a.post_title {
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a.tag {
+    text-decoration: none;
+    color: #707070;
+    margin-left: 0.2rem;
+}
+
+span.post_subtitle {
+    font-size: 1rem;
+}
+
+span.bottom {
+    color: #707070;
+    font-size: 1rem;
 }
 
 @font-face {
