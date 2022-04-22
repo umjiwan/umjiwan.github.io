@@ -96,28 +96,8 @@ for post in post_list:
 
     with open(f"post/{date}-{post_name}.html", "w") as file:
         file.write(content)
- 
-# tag
-
-# rm tag_file
-tag_file_list = os.listdir("tag/")
-for tag_file in tag_file_list:
-    os.remove("tag/" + tag_file)
-
-# write tag/index.html
-with open("tag/index.html", "w") as file:
-    for tag in list(set(tag_list)):
-        file.write(f"<a href='{tag}.html'>{tag}</a><br>\n")
-
-# write tag_file
-for tag in list(set(tag_list)):
-    for post_tag in post_tag_list:
-        if tag in post_tag[-1]:
-            with open(f"tag/{tag}.html", "a") as file:
-                file.write(f"<a href='../post/{post_tag[3]}-{post_tag[0]}.html'>{post_tag[1]}</a><br>\n")
 
 # index.html
-
 with open("template/_index.html", "r") as file:
     _index_content = file.read()
 
