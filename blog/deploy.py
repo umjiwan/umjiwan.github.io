@@ -1,8 +1,6 @@
 import os
 import re
 
-post_list = os.listdir("md/")
-
 # vsc 오류 제거용---
 title = 0
 subtitle = 0
@@ -10,6 +8,30 @@ date = 0
 hidden = 0
 tags = 0
 index = ""
+
+# post_list 정렬
+post_list = os.listdir("md/")
+post_date_list = []
+for post in post_list:
+    with open("md/" + post, "r") as file:
+        post_content = file.read()
+    
+    option_find = re.compile("[{].*[}]", re.DOTALL)
+    option_list = option_find.findall(post_content)
+    option_list = option_list[0][option_list[0].find("{")+1:option_list[0].find("}")-1]
+    option_list = option_list.split("\n")[1:]
+
+    for option in option_list: # option 추출
+        option = option.split(":")
+        if option[1][0] == " ":
+            option[1] = option[1][1:]
+        globals()[option[0]] = option[1]
+
+    post_date_list.append(f"{int(date.replace('-', ''))}-{post}")
+post_date_list.sort(reverse=True)
+post_list = []
+for post in post_date_list:
+    post_list.append(post.split("-")[1])
 
 # 기존 파일 제거
 rm_list = os.listdir("post/")
