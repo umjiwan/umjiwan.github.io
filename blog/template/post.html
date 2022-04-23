@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>ulog - {title}</title>
-        <link rel="stylesheet" href="../template/post.css">
+        <link rel="stylesheet" href="../static/style.css">
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div class="post">
-            <h1>{title}</h1>
-            <span class="github">
+        <div class="main_index">
+            <span class="h1">{title}</span><br>
+            <span class="_github">
                 <a id="home" class="home" href="#">홈화면</a>
                 <a class="github" target="_blank" href="https://github.com/umjiwan">깃헙</a>
             </span>
@@ -21,7 +21,7 @@
                 {content}
             </p>
             <hr>
-            <h5>
+            <h5 class="bottom">
                 작성자 : ulhangry<br>
                 쓴날짜 : {date}<br>
                 태그 : {tags}

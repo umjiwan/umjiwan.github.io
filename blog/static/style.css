@@ -15,12 +15,21 @@ span.h1 {
     display: inline-box;
 }
 
-span.github {
+span.github, span._github {
     display: inline-box;
     float: right;
+}
+
+span.github {
     margin-top: 1.3rem;
     margin-right: 1.5rem;
 }
+
+span.subtitle, p.content {
+    color: #ffffff;
+}
+
+
 
 a.github, a.home {
     font-size: 1rem;
@@ -48,6 +57,10 @@ p {
     margin-bottom: 1.5rem;
 }
 
+span.tag {
+    color: #707070
+}
+
 a.tag {
     text-decoration: none;
     color: #707070;
@@ -59,7 +72,7 @@ span.post_subtitle {
     color: #ffffff
 }
 
-span.bottom {
+.bottom {
     color: #707070;
     font-size: 1rem;
 }
