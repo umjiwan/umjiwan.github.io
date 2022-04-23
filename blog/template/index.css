@@ -1,3 +1,7 @@
+body {
+    background-color: #222222;
+}
+
 div.main_index {
     font-family: 'LeeSeoyun';
     max-width: 50rem;
@@ -7,6 +11,7 @@ div.main_index {
 
 span.h1 {
     font-size: 2rem;
+    color: #ffffff;
     display: inline-box;
 }
 
@@ -35,7 +40,7 @@ span.post_title {
 
 a.post_title {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 
 p {
@@ -50,6 +55,7 @@ a.tag {
 
 span.post_subtitle {
     font-size: 1rem;
+    color: #ffffff
 }
 
 span.bottom {

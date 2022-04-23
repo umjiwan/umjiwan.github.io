@@ -5,15 +5,21 @@ div.post {
     padding: 1rem;
 }
 
+body {
+    background-color: #222222;
+}
+
 h1 {
     display: inline-box;
     font-size: 2rem;
     margin-bottom: 0.2rem;
+    color: #ffffff;
 }
 
 span.subtitle {
     font-size: 1rem;
     display: inline-box;
+    color: #ffffff;
 }
 
 span.github {
@@ -30,6 +36,7 @@ a.github {
 
 p.content {
     font-size: 1rem;
+    color: #ffffff
 }
 
 h5 {
