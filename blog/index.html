@@ -5,12 +5,17 @@
         <meta name="viewport" content="width=device-width">
         <title>ulog</title>
         <link rel="stylesheet" href="template/index.css">
+        <script>
+            var home = document.getElementsByClassName("home");
+            var host = document.location.origin + "/blog/"
+            home.setAttribute("href", host);
+        </script>
     </head>
     <body>
         <div class="main_index">
             <span class="h1">배고픈유엘</span>
             <span class="github">
-                <a class="github" href="https://umjiwan.github.io/blog">홈화면</a>
+                <a class="home" href="#">홈화면</a>
                 <a class="github" target="_blank" href="https://github.com/umjiwan">깃헙</a>
             </span>
             <hr>
@@ -87,5 +92,10 @@
                 만든이: ulhangry
             </span>
         </div>
+        <script>
+            var home = document.getElementById("home");
+            var host = document.location.origin + "/blog/"
+            home.href = host;
+        </script>
     </body>
 </html>

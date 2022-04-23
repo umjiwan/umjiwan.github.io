@@ -22,12 +22,13 @@ span.github {
     margin-right: 1.5rem;
 }
 
-a.github {
+a.github, a.home {
     font-size: 1rem;
     color: #707070;
     text-decoration: none;
     margin-left: 0.5rem;
 }
+
 
 span.post_date {
     font-size: 0.7rem;

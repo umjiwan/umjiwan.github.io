@@ -27,7 +27,7 @@ span.github {
     float: right;
 }
 
-a.github {
+a.github, a.home {
     font-size: 1rem;
     color: #707070;
     text-decoration: none;
