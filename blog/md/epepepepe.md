@@ -5,30 +5,30 @@ subtitle: 가장 기본적인 출력이라는 걸 배워보자
 hidden: false
 tags: 파이썬, 테스트, 공부
 }
-파이썬 hello world 출력은<br>
-print("hello world")<br>
-<br>
-파이썬 hello world 출력은<br>
-print("hello world")<br>
-<br>
-파이썬 hello world 출력은<br>
-print("hello world")<br>
-<br>
-파이썬 hello world 출력은<br>
-print("hello world")<br>
-<br>
-파이썬 hello world 출력은<br>
-print("hello world")<br>
-<br>
-파이썬 hello world 출력은<br>
-print("hello world")<br>
-<br>
-파이썬 hello world 출력은<br>
-print("hello world")<br>
-<br>
+파이썬 hello world 출력은
+print("hello world")
+
+파이썬 hello world 출력은
+print("hello world")
+
+파이썬 hello world 출력은
+print("hello world")
+
+파이썬 hello world 출력은
+print("hello world")
+
+파이썬 hello world 출력은
+print("hello world")
+
+파이썬 hello world 출력은
+print("hello world")
+
+파이썬 hello world 출력은
+print("hello world")
+
 
 <code>
-print("hello world")<br>
+print("hello world")
 print("hell world")
 </code>
 
