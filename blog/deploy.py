@@ -1,5 +1,6 @@
 import os
 import re
+import time
 
 def getFileContent(fileName):
     with open(f"md/{fileName}", "r") as file:
@@ -23,7 +24,7 @@ def getPostContent(fileContent):
 
     return content
 
-def getOption(content):
+def getOption(content, _print=False):
     optionFind = re.compile("[{].*[}]", re.DOTALL)
     optionList = optionFind.findall(content)
     optionList = optionList[0][optionList[0].find("{")+1:optionList[0].find("}")-1]
@@ -35,19 +36,28 @@ def getOption(content):
         if optionVar[1][0] == " ":
             optionVar[1] = optionVar[1][1:]
         option[optionVar[0]] = optionVar[1]
+        if _print:
+            print(optionVar)
 
     option["tags"] = option["tags"].replace(" ", "")
     option["tags"] = option["tags"].split(",")
 
     return option
 
-def getPostList():
+def getPostList(_print=False):
     postList = os.listdir("md/")
     postDateList = []
 
+    if _print:
+        print("post list : " + ", ".join(postList))
+
     for post in postList:
+        if _print:
+            print("\n")
+            print("file : " + post)
         fileContent = getFileContent(post)
-        option = getOption(fileContent)
+        option = getOption(fileContent, _print=_print)
+
 
         postDateList.append(f"{option['date'].replace('-', '')}-{post}")
 
@@ -55,15 +65,18 @@ def getPostList():
     postList = []
     for post in postDateList:
         postList.append(post.split("-")[1])
-
+    if _print:
+        print(f"\npost date list : {postDateList}\n")
     return postList
 
-def removeFile(library):
+def removeFile(library, _print=False):
     removeList = os.listdir(library)
     for remove in removeList:
         os.remove(f"{library}/{remove}")
+        if _print:
+            print(f"{library}{remove} removed")
 
-def getListTemplate(option, post, dd=False):
+def getListTemplate(option, post, dd=False, _print=False):
     with open("template/list.html", "r") as file:
         listTemplate = file.read()
     
@@ -87,6 +100,9 @@ def getListTemplate(option, post, dd=False):
     else:
         listTemplate = listTemplate.replace("{..}", "")
 
+    if _print:
+        print("get list template : " + post)
+
     return listTemplate
 
 def getTagList(option, route):
@@ -97,7 +113,7 @@ def getTagList(option, route):
 
     return tagList
 
-def createIndex(listTemplate, route="index.html", dd=False):
+def createIndex(listTemplate, route="index.html", dd=False, _print=False):
     with open("template/_index.html", "r") as file:
         indexTemplate = file.read()
     
@@ -110,14 +126,16 @@ def createIndex(listTemplate, route="index.html", dd=False):
         dd = ""
         indexTemplate = indexTemplate.replace("{dd}", "")
         
-
     indexTemplate = indexTemplate.replace("{list}", listTemplate)
     indexTemplate = indexTemplate.replace("{..}", dd)
 
     with open(route, "w") as file:
         file.write(indexTemplate)
 
-def createPost(content, option, post):
+    if _print:
+        print("\nwrite index : " + route + "\n")
+
+def createPost(content, option, post, _print=False):
     with open("template/post.html", "r") as file:
         postTemplate = file.read()
     
@@ -133,7 +151,10 @@ def createPost(content, option, post):
     with open(f"post/{option['date']}-{post.replace('.md', '')}.html", "w") as file:
         file.write(postTemplate)
 
-def createTagFile(tagList, tagPostList):
+    if _print:
+        print("write post : " + f"post/{option['date']}-{post.replace('.md', '')}.html\n")
+
+def createTagFile(tagList, tagPostList, _print=False):
     tagList = list(set(tagList))
     tagFileList = {}
 
@@ -150,17 +171,23 @@ def createTagFile(tagList, tagPostList):
 
         for post in postList:
             fileContent = getFileContent(post)
-            option = getOption(fileContent)
+            option = getOption(fileContent, _print=_print)
 
             listTemplate += getListTemplate(option, post, dd=True)
-        createIndex(listTemplate, route=f"tag/{tag}.html", dd=True)
-def main():
-    postList = getPostList()
+        createIndex(listTemplate, route=f"tag/{tag}.html", dd=True, _print=_print)
+
+def main(_print=False):
+    startTime = time.time()
+    if _print:
+        print("start!\n")
+    postList = getPostList(_print=_print)
     listTemplate = ""
     tagList = []
     tagPostList = {}
 
-    removeFile("post/")
+    removeFile("post/", _print=_print)
+    if _print:
+        print("\n")
 
     for post in postList:
         fileContent = getFileContent(post)
@@ -170,19 +197,25 @@ def main():
         if option["hidden"] == "true":
             continue
 
-        listTemplate += getListTemplate(option, post)
-        createPost(content, option, post)
+        listTemplate += getListTemplate(option, post, _print=_print)
+        createPost(content, option, post, _print=_print)
 
         tagList += option["tags"]
         tagPostList[post] = option["tags"]
 
     if os.path.isfile("index.html"):
         os.remove("index.html")
+        if _print:
+            print("\nremoved index.html\n")
 
-    removeFile("tag/")
+    removeFile("tag/", _print=_print)
 
-    createIndex(listTemplate)
-    createTagFile(tagList, tagPostList)
+    createIndex(listTemplate, _print=_print)
+    createTagFile(tagList, tagPostList, _print=_print)
+
+    if _print:
+        print("done ;)")
+        print("total elapsed time : " + str(time.time() - startTime) + "sec")
         
 if __name__ == "__main__":
-    main()
+    main(_print=True)
