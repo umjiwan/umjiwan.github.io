@@ -505,6 +505,185 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+## \_print 옵션이 true 일때 나타나는 화면 예시
+```yml
+(base) ulhangry:blog/ (black) $ python3 deploy.py                                                                                                                      [16:00:07]
+start!
+
+post list : epepepepe.md, hmm.md, 0416sat.md, thank_lesh.md, test.md
+
+
+file : epepepepe.md
+['date', '2022-04-17']
+['title', '파이썬 Hello World! 출력']
+['subtitle', '가장 기본적인 출력이라는 걸 배워보자']
+['hidden', 'false']
+['tags', '파이썬, 테스트, 공부']
+
+
+file : hmm.md
+['date', '2022-04-14']
+['title', '안녕하세요!']
+['subtitle', '저를 소개할게요']
+['hidden', 'false']
+['tags', '인사, 테스트']
+
+
+file : 0416sat.md
+['date', '2022-04-16']
+['title', '4월 16일 어느날']
+['subtitle', '그날 나에게 엄청난 일이 일어났다.']
+['hidden', 'false']
+['tags', '일상, 테스트']
+
+
+file : thank_lesh.md
+['title', '레쉬님 감사합니다.']
+['subtitle', '정말정말정말정말정말정말정말정말정말']
+['hidden', 'false']
+['tags', '정말, 감사, 테스트']
+['date', '2022-04-21']
+
+
+file : test.md
+['date', '2022-04-07']
+['title', '이 세상에서 가장 무서운 것']
+['subtitle', '난 그것을 찾아 떠나기로 하였다.']
+['hidden', 'false']
+['tags', '소설, 공부, 테스트']
+
+post date list : ['20220421-thank_lesh.md', '20220417-epepepepe.md', '20220416-0416sat.md', '20220414-hmm.md', '20220407-test.md']
+
+post/2022-04-17-epepepepe.html removed
+post/2022-04-21-thank_lesh.html removed
+post/2022-04-07-test.html removed
+post/2022-04-16-0416sat.html removed
+post/2022-04-14-hmm.html removed
+
+
+get list template : thank_lesh.md
+write post : post/2022-04-21-thank_lesh.html
+
+get list template : epepepepe.md
+write post : post/2022-04-17-epepepepe.html
+
+get list template : 0416sat.md
+write post : post/2022-04-16-0416sat.html
+
+get list template : hmm.md
+write post : post/2022-04-14-hmm.html
+
+get list template : test.md
+write post : post/2022-04-07-test.html
+
+
+removed index.html
+
+tag/파이썬.html removed
+tag/일상.html removed
+tag/공부.html removed
+tag/감사.html removed
+tag/소설.html removed
+tag/테스트.html removed
+tag/인사.html removed
+tag/정말.html removed
+
+write index : index.html
+
+['date', '2022-04-14']
+['title', '안녕하세요!']
+['subtitle', '저를 소개할게요']
+['hidden', 'false']
+['tags', '인사, 테스트']
+
+write index : tag/인사.html
+
+['date', '2022-04-17']
+['title', '파이썬 Hello World! 출력']
+['subtitle', '가장 기본적인 출력이라는 걸 배워보자']
+['hidden', 'false']
+['tags', '파이썬, 테스트, 공부']
+['date', '2022-04-07']
+['title', '이 세상에서 가장 무서운 것']
+['subtitle', '난 그것을 찾아 떠나기로 하였다.']
+['hidden', 'false']
+['tags', '소설, 공부, 테스트']
+
+write index : tag/공부.html
+
+['date', '2022-04-17']
+['title', '파이썬 Hello World! 출력']
+['subtitle', '가장 기본적인 출력이라는 걸 배워보자']
+['hidden', 'false']
+['tags', '파이썬, 테스트, 공부']
+
+write index : tag/파이썬.html
+
+['title', '레쉬님 감사합니다.']
+['subtitle', '정말정말정말정말정말정말정말정말정말']
+['hidden', 'false']
+['tags', '정말, 감사, 테스트']
+['date', '2022-04-21']
+
+write index : tag/정말.html
+
+['date', '2022-04-07']
+['title', '이 세상에서 가장 무서운 것']
+['subtitle', '난 그것을 찾아 떠나기로 하였다.']
+['hidden', 'false']
+['tags', '소설, 공부, 테스트']
+
+write index : tag/소설.html
+
+['title', '레쉬님 감사합니다.']
+['subtitle', '정말정말정말정말정말정말정말정말정말']
+['hidden', 'false']
+['tags', '정말, 감사, 테스트']
+['date', '2022-04-21']
+
+write index : tag/감사.html
+
+['title', '레쉬님 감사합니다.']
+['subtitle', '정말정말정말정말정말정말정말정말정말']
+['hidden', 'false']
+['tags', '정말, 감사, 테스트']
+['date', '2022-04-21']
+['date', '2022-04-17']
+['title', '파이썬 Hello World! 출력']
+['subtitle', '가장 기본적인 출력이라는 걸 배워보자']
+['hidden', 'false']
+['tags', '파이썬, 테스트, 공부']
+['date', '2022-04-16']
+['title', '4월 16일 어느날']
+['subtitle', '그날 나에게 엄청난 일이 일어났다.']
+['hidden', 'false']
+['tags', '일상, 테스트']
+['date', '2022-04-14']
+['title', '안녕하세요!']
+['subtitle', '저를 소개할게요']
+['hidden', 'false']
+['tags', '인사, 테스트']
+['date', '2022-04-07']
+['title', '이 세상에서 가장 무서운 것']
+['subtitle', '난 그것을 찾아 떠나기로 하였다.']
+['hidden', 'false']
+['tags', '소설, 공부, 테스트']
+
+write index : tag/테스트.html
+
+['date', '2022-04-16']
+['title', '4월 16일 어느날']
+['subtitle', '그날 나에게 엄청난 일이 일어났다.']
+['hidden', 'false']
+['tags', '일상, 테스트']
+
+write index : tag/일상.html
+
+done ;)
+total elapsed time : 0.01149296760559082sec
+```
+
 감사합니다.<br>
 
 ## 추가할 예정인 기능
