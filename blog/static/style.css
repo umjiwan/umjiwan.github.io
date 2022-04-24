@@ -3,7 +3,7 @@ body {
 }
 
 div.main_index {
-    font-family: 'GangwonEdu_OTFBoldA';
+    font-family: 'LeeSeoyun';
     max-width: 50rem;
     margin: 0 auto;
     padding: 1rem
@@ -76,8 +76,8 @@ span.post_subtitle {
 }
 
 @font-face {
-    font-family: 'GangwonEdu_OTFBoldA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
