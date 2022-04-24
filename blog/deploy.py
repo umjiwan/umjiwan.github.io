@@ -1,7 +1,3 @@
-import os
-import re
-import time
-
 def getFileContent(fileName):
     with open(f"md/{fileName}", "r") as file:
         content = file.read()
@@ -21,6 +17,7 @@ def getPostContent(fileContent):
             break
     
     content = "".join(content_list)
+    content = content.replace("\n", "<br>\n")
 
     return content
 
@@ -216,6 +213,18 @@ def main(_print=False):
     if _print:
         print("done ;)")
         print("total elapsed time : " + str(time.time() - startTime) + "sec")
-        
+
+import os
+import re
+import time
+import sys
+
 if __name__ == "__main__":
-    main(_print=True)
+    argList = sys.argv[1:]
+
+    _print = True
+
+    if "_print=False" in argList:
+        _print = False
+
+    main(_print=_print)
