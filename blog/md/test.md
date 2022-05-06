@@ -2,7 +2,7 @@
 date: 2022-04-07
 title: 이 세상에서 가장 무서운 것
 subtitle: 난 그것을 찾아 떠나기로 하였다.
-hidden: false
+hidden: true
 tags: 소설, 공부, 테스트
 }
 아이고 무서워라 ㅠ

@@ -2,7 +2,7 @@
 date: 2022-04-17
 title: 파이썬 Hello World! 출력
 subtitle: 가장 기본적인 출력이라는 걸 배워보자
-hidden: false
+hidden: true
 tags: 파이썬, 테스트, 공부
 }
 파이썬 hello world 출력은

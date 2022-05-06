@@ -1,7 +1,7 @@
 {
 title: 레쉬님 감사합니다.
 subtitle: 정말정말정말정말정말정말정말정말정말
-hidden: false
+hidden: true
 tags: 정말, 감사, 테스트
 date: 2022-04-21
 }

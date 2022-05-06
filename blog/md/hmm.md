@@ -2,7 +2,7 @@
 date: 2022-04-14
 title: 안녕하세요!
 subtitle: 저를 소개할게요
-hidden: false
+hidden: true
 tags: 인사, 테스트
 }
 
