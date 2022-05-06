@@ -75,6 +75,43 @@ span.post_subtitle {
     font-size: 1rem;
 }
 
+a {
+    color: #707070;
+    text-decoration: none
+}
+
+p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem
+}
+
+h5 {
+    font-size: 0.5rem;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ffffff;
+    margin: 0;
+    
+}
+
 @font-face {
     font-family: 'LeeSeoyun';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
