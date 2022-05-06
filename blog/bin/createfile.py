@@ -17,7 +17,7 @@ def getPostContent(fileContent):
             break
     
     content = "".join(content_list)
-    content = content.replace("\n", "<br>\n")
+    content = markdown.markdown(content)
 
     return content
 
@@ -230,6 +230,7 @@ import re
 import time
 import sys
 import json
+import markdown
 
 if __name__ == "__main__":
     argList = sys.argv[1:]
