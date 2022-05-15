@@ -1,6 +1,6 @@
 {
-title: 블로그의 목적성
-subtitle: 이 블로그가 후에 다른 방향성으로 흘러가지 않도록 여기에 목적성을 적는다.
+title: 블로그의 목적
+subtitle: 이 블로그가 후에 다른 방향성으로 흘러가지 않도록 여기에 목적을 적는다.
 date: 2022-05-14
 hidden: false
 tags: 첫포스팅
@@ -20,4 +20,9 @@ tags: 첫포스팅
 1주일에 2번 목표는 월요일, 목요일<br>
 글을 올리지 않았다는건 그 주의 학습을 안했다는 생각을 하면서 열심히 글을 쓸거다.
 
-끝
+<br>
+
+### 블로그 코드
+<br>
+<script src="https://gist.github.com/umjiwan/b7b015cf241bf109f96aac9609b48dc6.js"></script>
+
